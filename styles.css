@@ -1,0 +1,132 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+/* Main content */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.album {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.album img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.album h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.tracklist {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.tracklist li {
+    margin-bottom: 0.3rem;
+}
+
+.streaming-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    section {
+        padding: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav a {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Dark and Light mode */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles */
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+    :root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theshakiblyrics</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="E:\New folder (2)\artistjs.js"></script>
+    <style>
+        /* Custom styles */
+        body {
+            background-color: white;
+            color: white;
+        }
+        header {
+            background-color: yellow;
+            padding: 1rem;
+            text-align: center;
+        }
+        header img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        h1, p {
+            color: blue;
+        }
+        nav {
+            background-color: black ;
+        }
+        nav a {
+            color: black;
+        }
+        h2 {
+            color: black;
+        }
+        .album {
+            background-color: rgb(68, 66, 66);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .album img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .streaming-links a {
+            color: blue;
+            text-decoration: none;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .story-text {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .choice-btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="E:\New folder (2)\images\Capture 2.PNG" alt="Profile Photo">
+            <h1>theshakiblyrics</h1>
+            <p>Musician & Lyrics Content Creator</p>
+            <p>theshakibtv@gmail.com</p>
+            <a href="E:\New folder (2)\music section.html" class="btn btn-primary">Listen Now</a>
+        </div>
+         <div class="container mt-5">
+        <div class="story-container">
+            <p class="story-text">You wake up in a mysterious forest. The air smells of pine and damp earth. You see two paths ahead:</p>
+            <button class="btn btn-primary choice-btn" onclick="choosePath('left')">Take the left path</button>
+            <button class="btn btn-primary choice-btn" onclick="choosePath('right')">Take the right path</button>
+        </div>
+    </div>
+
+    <script>
+        function choosePath(choice) {
+            if (choice === 'left') {
+                // Update the story text and choices for the left path
+                document.querySelector('.story-text').textContent = "You encounter a friendly squirrel who leads you to a hidden waterfall.";
+                document.querySelectorAll('.choice-btn')[0].textContent = "Swim in the waterfall";
+                document.querySelectorAll('.choice-btn')[1].textContent = "Follow the squirrel deeper into the forest";
+            } else if (choice === 'right') {
+                // Update the story text and choices for the right path
+                document.querySelector('.story-text').textContent = "You stumble upon an ancient stone circle. The stones seem to hum with energy.";
+                document.querySelectorAll('.choice-btn')[0].textContent = "Touch the stones";
+                document.querySelectorAll('.choice-btn')[1].textContent = "Walk away";
+            }
+        }
+    </script>
+    </header>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="E:\New folder (2)\music section.html">Music Section Catalog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="music" class="container mt-4">
+        <!-- Music content goes here -->
+        <h2>My Music</h2>
+        <div class="album card mb-4">
+            <img src="E:\New folder (2)\images\healing.jpg" alt="Album 1 Cover" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">Healing</h3>
+                <p class="card-text">Release Date: May 2024</p>
+                <div class="streaming-links">
+                    <a href="https://open.spotify.com/track/1plUjHagrFTRJryvbNI65g?si=4b73df5dccd04d1c">Listen on Spotify</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more albums or singles here -->
+    </section>
+    <section id="contact" class="container mt-4">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required class="form-control mb-2">
+            <input type="email" placeholder="Email" required class="form-control mb-2">
+            <textarea class="form-control" rows="4"></textarea>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+        
+    </section>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 theshakiblyrics</p>
+    </footer>
+    <!-- Add Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<button id="dark-mode-toggle">Toggle Dark Mode</button>
+<script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+    });
+</script>
+
+</html>
